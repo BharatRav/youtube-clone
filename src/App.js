@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppContext } from "./context/contextApi.js";
 import Header from "./components/Header.js";
 import SearchResult from "./components/SearchResult.js";
+import VideoDetails from "./components/VideoDetails.js";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
               path="/searchResult/:searchQuery"
               element={<SearchResult />}
             />
-            <Route path="/video/:id" element={"video"} />
+            <Route path="/video/:id" element={<VideoDetails />} />
           </Routes>
         </div>
       </BrowserRouter>
